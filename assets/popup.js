@@ -34,12 +34,12 @@
   window.PopupIndex = function () {
     const built = buildPopup();
     if (!built) return;
-    const { bd, close } = built;
+    const { bd } = built;
  
     // Your custom behavior: Yes = just close, No = go to privacy
     bd.querySelector("#age-yes").addEventListener("click", close);
     bd.querySelector("#age-no").addEventListener("click", () => {
-      window.location.href = "privacy.html";
+      window.location.href = "REDIRECT";
     });
   };
  
@@ -50,17 +50,14 @@
     const { bd } = built;
  
     // Your custom behavior: both buttons redirect
-    bd.querySelector("#age-yes").addEventListener("click", function(){
-    window.location.href = "https://h2n6.com/?utm_campaign=5nCwAaRHT5&v1=[v1]&v2=[v2]&v3=[v3]"; // change to your target page
-    });
-    bd.querySelector("#age-no").addEventListener("click", function(){
-    window.location.href = "https://h2n6.com/?utm_campaign=5nCwAaRHT5&v1=[v1]&v2=[v2]&v3=[v3]"; // change to your target page
-    });
+    bd.querySelector("#age-yes").addEventListener("click", close); 
+    bd.querySelector("#age-no").addEventListener("click", close);
   };
 })();
  
 
  
+
 
 
 
