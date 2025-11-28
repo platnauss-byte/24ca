@@ -37,7 +37,9 @@
     const { bd } = built;
  
     // Your custom behavior: Yes = just close, No = go to privacy
-    bd.querySelector("#age-yes").addEventListener("click", close);
+    bd.querySelector("#age-yes").addEventListener("click",() => {
+      window.location.href = REDIRECT;
+    });
     bd.querySelector("#age-no").addEventListener("click", () => {
       window.location.href = REDIRECT;
     });
@@ -57,6 +59,7 @@
  
 
  
+
 
 
 
